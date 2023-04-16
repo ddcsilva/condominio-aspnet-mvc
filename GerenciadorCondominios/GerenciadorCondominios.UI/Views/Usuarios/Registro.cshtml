@@ -16,6 +16,7 @@
 </head>
 <body class="corpo">
 
+
     <div class="registroform">
         <div class="center-align">
             <h4><i class="large material-icons">account_circle</i></h4>
@@ -26,6 +27,7 @@
             <form asp-action="Registro" enctype="multipart/form-data">
                 <div class="campos">
                     <div class="red-text text-darken-4" asp-validation-summary="ModelOnly"></div>
+
 
                     <div class="row">
                         <div class="input-field col s12">
@@ -56,6 +58,7 @@
                         </div>
                     </div>
 
+
                     <div class="row">
                         <div class="input-field col s12">
                             <input asp-for="Telefone" class="validate" id="Telefone" />
@@ -76,7 +79,7 @@
                         <div class="input-field col s12">
                             <input asp-for="Senha" class="validate" type="password" id="Senha" />
                             <label asp-for="Senha" for="Senha"></label>
-                            <span asp-validation-for="Senha" class"text-darken-4"></span>
+                            <span asp-validation-for="Senha" class="red-text text-darken-4"></span>
                         </div>
                     </div>
                     <div class="row">
