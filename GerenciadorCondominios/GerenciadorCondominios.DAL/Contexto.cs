@@ -1,11 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace GerenciadorCondominios.DAL
+namespace GerenciadorCondominios.DAL;
+
+public class Contexto : DbContext
 {
-    public class Contexto : DbContext
+    public Contexto(DbContextOptions<Contexto> options) : base(options)
     {
-        public Contexto(DbContextOptions<Contexto> options) : base(options)
-        {
-        }
     }
 }
