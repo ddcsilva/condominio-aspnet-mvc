@@ -1,4 +1,6 @@
+using GerenciadorCondominios.BLL.Models;
 using GerenciadorCondominios.DAL;
+using GerenciadorCondominios.UI.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,17 +10,23 @@ builder.Services.AddDbContext<Contexto>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoDB"));
 });
 
-builder.Services.AddControllersWithViews();
+builder.Services.AddIdentity<Usuario, Funcao>().AddEntityFrameworkStores<Contexto>();
 
-builder.Services.AddScoped<Contexto>();
+builder.Services.AddAuthentication();
+builder.Services.AddAuthorization();
+
+builder.Services.ConfigurarRepositorios();
+builder.Services.ConfigurarCookies();
+builder.Services.ConfigurarNomeUsuario();
+builder.Services.ConfigurarSenhaUsuario();
+
+builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -28,6 +36,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+app.UseAuthentication();
 
 app.MapControllerRoute(
     name: "default",

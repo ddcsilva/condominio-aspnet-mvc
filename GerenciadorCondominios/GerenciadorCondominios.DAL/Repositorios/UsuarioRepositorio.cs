@@ -26,7 +26,7 @@ public class UsuarioRepositorio : RepositorioGenerico<Usuario>, IUsuarioReposito
         catch (Exception ex)
         {
 
-            throw ex;
+            throw new RepositorioException("Erro ao criar usuário", ex);
         }
     }
 
@@ -39,7 +39,7 @@ public class UsuarioRepositorio : RepositorioGenerico<Usuario>, IUsuarioReposito
         catch (Exception ex)
         {
 
-            throw ex;
+            throw new RepositorioException("Erro ao incluir usuário na Função", ex);
         }
     }
 
@@ -52,7 +52,7 @@ public class UsuarioRepositorio : RepositorioGenerico<Usuario>, IUsuarioReposito
         catch (Exception ex)
         {
 
-            throw ex;
+            throw new RepositorioException("Erro ao logar usuário", ex);
         }
     }
 
@@ -65,7 +65,7 @@ public class UsuarioRepositorio : RepositorioGenerico<Usuario>, IUsuarioReposito
         catch (Exception ex)
         {
 
-            throw ex;
+            throw new RepositorioException("Erro ao deslogar usuário", ex);
         }
     }
 
@@ -78,7 +78,7 @@ public class UsuarioRepositorio : RepositorioGenerico<Usuario>, IUsuarioReposito
         catch (Exception ex)
         {
 
-            throw ex;
+            throw new RepositorioException("Erro ao verificar usuário", ex);
         }
     }
 
@@ -91,7 +91,7 @@ public class UsuarioRepositorio : RepositorioGenerico<Usuario>, IUsuarioReposito
         catch (Exception ex)
         {
 
-            throw ex;
+            throw new RepositorioException("Erro ao retornar usuário", ex);
         }
     }
 
@@ -104,7 +104,7 @@ public class UsuarioRepositorio : RepositorioGenerico<Usuario>, IUsuarioReposito
         catch (Exception ex)
         {
 
-            throw ex;
+            throw new RepositorioException("Erro ao atualizar usuário", ex);
         }
     }
 
@@ -117,7 +117,7 @@ public class UsuarioRepositorio : RepositorioGenerico<Usuario>, IUsuarioReposito
         catch (Exception ex)
         {
 
-            throw ex;
+            throw new RepositorioException("Erro ao retornar usuário", ex);
         }
     }
 
@@ -130,7 +130,7 @@ public class UsuarioRepositorio : RepositorioGenerico<Usuario>, IUsuarioReposito
         catch (Exception ex)
         {
 
-            throw ex;
+            throw new RepositorioException("Erro ao retornar usuário", ex);
         }
     }
 
@@ -143,7 +143,7 @@ public class UsuarioRepositorio : RepositorioGenerico<Usuario>, IUsuarioReposito
         catch (Exception ex)
         {
 
-            throw ex;
+            throw new RepositorioException("Erro ao retornar usuário", ex);
         }
     }
 
@@ -156,7 +156,7 @@ public class UsuarioRepositorio : RepositorioGenerico<Usuario>, IUsuarioReposito
         catch (Exception ex)
         {
 
-            throw ex;
+            throw new RepositorioException("Erro ao retornar usuário", ex);
         }
     }
 
@@ -169,7 +169,7 @@ public class UsuarioRepositorio : RepositorioGenerico<Usuario>, IUsuarioReposito
         catch (Exception ex)
         {
 
-            throw ex;
+            throw new RepositorioException("Erro ao retornar usuário", ex);
         }
     }
 
@@ -182,7 +182,7 @@ public class UsuarioRepositorio : RepositorioGenerico<Usuario>, IUsuarioReposito
         catch (Exception ex)
         {
 
-            throw ex;
+            throw new RepositorioException("Erro ao retornar usuário", ex);
         }
     }
 
@@ -195,7 +195,7 @@ public class UsuarioRepositorio : RepositorioGenerico<Usuario>, IUsuarioReposito
         catch (Exception ex)
         {
 
-            throw ex;
+            throw new RepositorioException("Erro ao retornar usuário", ex);
         }
     }
 }

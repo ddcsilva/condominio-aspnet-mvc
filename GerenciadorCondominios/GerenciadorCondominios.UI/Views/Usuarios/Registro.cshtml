@@ -25,14 +25,14 @@
 </head>
 <body class="corpo">
 
-    <div class="registroform">
+    <div class="form-container">
         <div class="center-align">
             <h4><i class="large material-icons">account_circle</i></h4>
             <h5>Novo morador</h5>
         </div>
 
         <div>
-            <form asp-action="Registro" enctype="multipart/form-data">
+            <form asp-action="Registro" asp-controller="Usuarios" method="post" enctype="multipart/form-data">
                 <div class="campos">
                     <div class="red-text text-darken-4" asp-validation-summary="ModelOnly"></div>
 
@@ -57,7 +57,7 @@
                         <div class="file-field input-field col s12">
                             <div class="btn-small">
                                 <span>Selecione sua foto</span>
-                                <input asp-for="Foto" type="file" class="validate" id="foto" />
+                                <input type="file" class="validate" id="foto" name="foto" />
                             </div>
 
                             <div class="file-path-wrapper">
@@ -65,7 +65,6 @@
                             </div>
                         </div>
                     </div>
-
 
                     <div class="row">
                         <div class="input-field col s12">

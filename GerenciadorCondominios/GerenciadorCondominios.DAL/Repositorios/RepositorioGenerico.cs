@@ -22,7 +22,7 @@ public class RepositorioGenerico<TEntity> : IRepositorioGenerico<TEntity> where 
         }
         catch (Exception ex)
         {
-            throw ex;
+            throw new RepositorioException("Erro ao atualizar entidade", ex);
         }
     }
 
@@ -35,7 +35,7 @@ public class RepositorioGenerico<TEntity> : IRepositorioGenerico<TEntity> where 
         }
         catch (Exception ex)
         {
-            throw ex;
+            throw new RepositorioException("Erro ao excluir entidade", ex);
         }
     }
 
@@ -49,7 +49,7 @@ public class RepositorioGenerico<TEntity> : IRepositorioGenerico<TEntity> where 
         }
         catch (Exception ex)
         {
-            throw ex;
+            throw new RepositorioException("Erro ao excluir entidade", ex);
         }
     }
 
@@ -63,7 +63,7 @@ public class RepositorioGenerico<TEntity> : IRepositorioGenerico<TEntity> where 
         }
         catch (Exception ex)
         {
-            throw ex;
+            throw new RepositorioException("Erro ao excluir entidade", ex);
         }
     }
 
@@ -76,7 +76,7 @@ public class RepositorioGenerico<TEntity> : IRepositorioGenerico<TEntity> where 
         }
         catch (Exception ex)
         {
-            throw ex;
+            throw new RepositorioException("Erro ao inserir entidade", ex);
         }
     }
 
@@ -89,7 +89,7 @@ public class RepositorioGenerico<TEntity> : IRepositorioGenerico<TEntity> where 
         }
         catch (Exception ex)
         {
-            throw ex;
+            throw new RepositorioException("Erro ao inserir entidade", ex);
         }
     }
 
@@ -101,7 +101,7 @@ public class RepositorioGenerico<TEntity> : IRepositorioGenerico<TEntity> where 
         }
         catch (Exception ex)
         {
-            throw ex;
+            throw new RepositorioException("Erro ao retornar entidade", ex);
         }
     }
 
@@ -113,7 +113,7 @@ public class RepositorioGenerico<TEntity> : IRepositorioGenerico<TEntity> where 
         }
         catch (Exception ex)
         {
-            throw ex;
+            throw new RepositorioException("Erro ao retornar entidade", ex);
         }
     }
 
@@ -125,7 +125,7 @@ public class RepositorioGenerico<TEntity> : IRepositorioGenerico<TEntity> where 
         }
         catch (Exception ex)
         {
-            throw ex;
+            throw new RepositorioException("Erro ao retornar entidade", ex);
         }
     }
 }
